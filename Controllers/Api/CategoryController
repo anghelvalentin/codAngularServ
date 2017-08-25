@@ -1,0 +1,29 @@
+using MvcAngularJSQuiz.Models;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace MvcAngularJSQuiz.Controllers.Api
+{
+    public class CategoryController : ApiController
+    {
+        private ApplicationDbContext _context;
+
+        public CategoryController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public HttpResponseMessage Get()
+        {
+
+            return new HttpResponseMessage();
+        }
+
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            _context.Dispose();
+        }
+    }
+}
